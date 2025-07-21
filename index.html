@@ -6,29 +6,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- FACEBOOK / LINKEDIN / PRODUCT HUNT OPEN GRAPH META TAGS -->
-<meta property="og:title" content="Qippi – Smart Procurement & Quotations" />
-<meta property="og:description" content="Qippi makes quoting and procurement simple and fast for clients and suppliers. Coming soon!" />
-<meta property="og:image" content="https://qippi.co.za/assets/images/qippipage.png" />
-<meta property="og:url" content="https://qippi.co.za/" />
-<meta property="og:type" content="website" />
+  <meta property="og:title" content="Qippi – Smart Procurement & Quotations" />
+  <meta property="og:description" content="Qippi makes quoting and procurement simple and fast for clients and suppliers. Coming soon!" />
+  <meta property="og:image" content="https://qippi.co.za/assets/images/qippipage.png" />
+  <meta property="og:url" content="https://qippi.co.za/" />
+  <meta property="og:type" content="website" />
 
-<!-- TWITTER META TAGS -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Qippi – Smart Procurement & Quotations" />
-<meta name="twitter:description" content="Qippi makes quoting and procurement simple and fast for clients and suppliers. Coming soon!" />
-<meta name="twitter:image" content="https://qippi.co.za/assets/images/qippipage.png" />
-<meta name="twitter:url" content="https://qippi.co.za/" />
-
+  <!-- TWITTER META TAGS -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Qippi – Smart Procurement & Quotations" />
+  <meta name="twitter:description" content="Qippi makes quoting and procurement simple and fast for clients and suppliers. Coming soon!" />
+  <meta name="twitter:image" content="https://qippi.co.za/assets/images/qippipage.png" />
+  <meta name="twitter:url" content="https://qippi.co.za/" />
 
   <link rel="icon" type="image/png" href="assets/images/logo.png" />
+
   <style>
-    /* your CSS stays unchanged */
+    /* CUSTOM FONT FACE */
+    @font-face {
+      font-family: 'Satoshi';
+      src: url('assets/fonts/OTF/Satoshi-Regular.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Satoshi';
+      src: url('assets/fonts/OTF/Satoshi-Bold.otf') format('opentype');
+      font-weight: bold;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: 'Satoshi';
+      src: url('assets/fonts/OTF/Satoshi-Italic.otf') format('opentype');
+      font-weight: normal;
+      font-style: italic;
+    }
+    @font-face {
+      font-family: 'Satoshi';
+      src: url('assets/fonts/OTF/Satoshi-BoldItalic.otf') format('opentype');
+      font-weight: bold;
+      font-style: italic;
+    }
+
     * {
       box-sizing: border-box;
     }
     body {
       margin: 0;
-      font-family: 'Arial', sans-serif;
+      font-family: 'Satoshi', Arial, sans-serif;
       background-color: #c3a6e3;
       color: #1c1c1c;
       text-align: center;
@@ -71,6 +96,7 @@
     h1 {
       font-size: 76px;
       margin: -130px 0 0px;
+      font-weight: bold;
     }
     h3 {
       font-size: 24px;
@@ -99,6 +125,7 @@
       width: 100%;
       border: none;
       border-radius: 5px;
+      font-family: 'Satoshi', sans-serif;
     }
     form button {
       padding: 12px 20px;
@@ -109,6 +136,7 @@
       cursor: pointer;
       margin-top: 10px;
       font-size: 16px;
+      font-family: 'Satoshi', sans-serif;
     }
     #thank-you {
       display: none;
@@ -117,7 +145,6 @@
       color: rgb(44, 44, 44);
       padding: 0 10px;
     }
-
     .about-qippi {
       background-color: #d7bdf2;
       padding: 40px 20px;
@@ -136,7 +163,6 @@
       margin: 0 auto;
       line-height: 1.6;
     }
-
     footer {
       margin-top: auto;
       padding: 20px;
@@ -205,7 +231,6 @@
     <a href="https://x.com/jst_booi?t=Ha5v4JVM4WolY2xzxMB1YA" target="_blank" rel="noopener noreferrer">
       <img src="assets/images/twitter.png" alt="Twitter">
     </a>
-    
   </div>
 
   <div class="container content">
@@ -214,9 +239,7 @@
     <h3>Qippi is Coming Soon</h3>
 
     <form action="https://formspree.io/f/mgvyqvdl" method="POST">
-      <label class="form-label">Join our wishlist and be the first to know when Qippi launches!
-
-</label>
+      <label class="form-label">Join our wishlist and be the first to know when Qippi launches!</label>
       <div class="form-group">
         <input type="text" name="Name" placeholder="Full Name" required />
       </div>
@@ -253,7 +276,6 @@
 
     form.addEventListener("submit", async function (e) {
       e.preventDefault();
-
       const formData = new FormData(form);
       const action = form.getAttribute("action");
 
@@ -265,7 +287,6 @@
             Accept: "application/json"
           }
         });
-
         if (response.ok) {
           form.reset();
           form.style.display = "none";
